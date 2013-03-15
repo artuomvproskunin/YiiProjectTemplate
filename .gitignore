@@ -31,9 +31,9 @@ index
 /console/runtime
 
 # configuration files created locally by post deployment script or by a developer
-/backend/config/*
-/frontend/config/*
-/common/config/*
-/console/config/*
+/backend/config/*.php
+/frontend/config/*.php
+/common/config/*.php
+/console/config/*.php
 !/console/config/default.php
 
