@@ -7,6 +7,9 @@
  * Time: 15:43
  */
 
+defined('YII_DEBUG') or define('YII_DEBUG', true);
+defined('YII_TRACE_LEVEL') or define('YII_TRACE_LEVEL', 3);
+
 chdir(dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..');
 
 require_once('common' . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'Yii' . DIRECTORY_SEPARATOR . 'yii.php');
