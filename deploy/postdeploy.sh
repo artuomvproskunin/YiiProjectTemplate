@@ -25,6 +25,13 @@ function parametrizeConfig {
     fi
 }
 
+function prepareDirs {
+    PDDIR=$1
+    rm -R $PDDIR
+    mkdir $PDDIR
+    chmod -R 777 $PDDIR
+}
+
 function errorExit {
     echo $1
     cd $CURDIR
@@ -63,17 +70,10 @@ mv $TMP_DIR/console-main.php ../console/config/main.php
 mv $TMP_DIR/backend-main.php ../backend/config/main.php
 mv $TMP_DIR/backend-main-devel.php ../backend/config/main-devel.php
 
-
-mkdir ../frontend/runtime
-mkdir ../frontend/www/assets
-mkdir ../console/runtime
-mkdir ../backend/runtime
-mkdir ../backend/www/assets
-
-chmod -R 777 ../frontend/runtime
-chmod -R 777 ../frontend/www/assets
-chmod -R 777 ../console/runtime
-chmod -R 777 ../backend/runtime
-chmod -R 777 ../backend/www/assets
+prepareDirs ../frontend/runtime
+prepareDirs ../frontend/www/assets
+prepareDirs ../console/runtime
+prepareDirs ../backend/runtime
+prepareDirs ../backend/www/assets
 
 cd $CURDIR

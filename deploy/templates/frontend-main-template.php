@@ -83,9 +83,9 @@ $config = array(
     // autoloading model and component classes
     // @see http://www.yiiframework.com/doc/api/1.1/YiiBase#import-detail
     'import'=>array(
-        'backend.components.*',
-        'backend.models.*',
-        'backend.extensions.*',
+        'frontend.components.*',
+        'frontend.models.*',
+        'frontend.extensions.*',
         'common.helpers.*',
         'common.extensions.*',
         'common.models.*',
